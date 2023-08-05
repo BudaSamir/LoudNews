@@ -26,24 +26,6 @@ class _HeadlinesSectionState extends State<HeadlinesSection> {
         .toList();
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "Breaking News",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
-              ),
-              Text(
-                "See All",
-                style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontWeight: FontWeight.w600),
-              ),
-            ],
-          ),
-        ),
         CarouselSlider(
           carouselController: _controller,
           items: headlinesItems,
