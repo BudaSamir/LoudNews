@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loudnews/views/screens/home_screen.dart';
+import 'package:loudnews/views/screens/layout.dart';
 
 class LoudNews extends StatelessWidget {
   const LoudNews({super.key});
@@ -10,11 +10,12 @@ class LoudNews extends StatelessWidget {
       title: 'Loud News',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         primaryColor: Colors.blue,
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const Layout(),
     );
   }
 }
