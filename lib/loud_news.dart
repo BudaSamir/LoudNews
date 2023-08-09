@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:loudnews/views/screens/layout.dart';
 
 class LoudNews extends StatelessWidget {
-  const LoudNews({super.key});
-
+  const LoudNews._internal();
+  static const LoudNews _loudNews = LoudNews._internal();
+  factory LoudNews() => _loudNews;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

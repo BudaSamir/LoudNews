@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
   persistent_bottom_nav_bar_v2: ^4.2.8
+  dio: ^5.3.2
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
