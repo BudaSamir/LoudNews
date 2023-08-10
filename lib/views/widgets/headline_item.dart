@@ -72,8 +72,8 @@ class HeadlineItem extends StatelessWidget {
                       title,
                       style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold),
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600),
                     )),
               ),
             ],

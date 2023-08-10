@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:loudnews/models/news_item.dart';
+import 'package:loudnews/models/news_model.dart';
 import 'package:loudnews/views/widgets/appbar_icon.dart';
 
 class NewsDetailsAppBarSection extends StatefulWidget {
-  final NewsItem newsItem;
+  final NewsArticles newsItem;
 
   const NewsDetailsAppBarSection({super.key, required this.newsItem});
 
@@ -43,7 +43,7 @@ class _NewsDetailsAppBarSectionState extends State<NewsDetailsAppBarSection> {
           children: [
             Positioned.fill(
               child: Image.network(
-                widget.newsItem.imgUrl,
+                widget.newsItem.urlToImage,
                 fit: BoxFit.cover,
               ),
             ),
@@ -65,7 +65,7 @@ class _NewsDetailsAppBarSectionState extends State<NewsDetailsAppBarSection> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        widget.newsItem.category,
+                        widget.newsItem.source.name,
                         style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       ),
@@ -80,7 +80,7 @@ class _NewsDetailsAppBarSectionState extends State<NewsDetailsAppBarSection> {
                               )),
                   const SizedBox(height: 8.0),
                   Text(
-                    '${widget.newsItem.author} • ${widget.newsItem.time}',
+                    '${widget.newsItem.author} • ${widget.newsItem.title}',
                     style: const TextStyle(color: Colors.white),
                   ),
                 ],

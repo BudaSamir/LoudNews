@@ -1,7 +1,7 @@
 class News {
   String status;
   int totalResults;
-  List<NewsArticles> newsArticles;
+  List<dynamic> newsArticles;
 
   News(
       {required this.status,
@@ -41,22 +41,22 @@ class NewsArticles {
   factory NewsArticles.fromJson(Map<String, dynamic> json) {
     return NewsArticles(
         source: Source.fromJson(json['source']),
-        author: json['author'],
-        title: json['title'],
-        description: json['description'],
-        url: json['url'],
-        urlToImage: json['urlToImage'],
-        publishedAt: json['publishedAt'],
-        content: json['content']);
+        author: json['author'] ?? 'null',
+        title: json['title'] ?? 'null',
+        description: json['description'] ?? 'null',
+        url: json['url'] ?? 'null',
+        urlToImage: json['urlToImage'] ?? 'null',
+        publishedAt: json['publishedAt'] ?? 'null',
+        content: json['content'] ?? 'null');
   }
 }
 
 class Source {
-  String id;
+  String? id;
   String name;
   Source({required this.id, required this.name});
 
   factory Source.fromJson(Map<String, dynamic> json) {
-    return Source(id: json['id'], name: json['name']);
+    return Source(id: json['id'] ?? 'null', name: json['name']);
   }
 }

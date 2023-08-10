@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:loudnews/models/news_item.dart';
+import 'package:loudnews/models/news_model.dart';
 import 'package:loudnews/views/screens/news_details_screen.dart';
 
 class RecommendationItem extends StatelessWidget {
-  final NewsItem newsItem;
+  final NewsArticles newsItem;
 
   const RecommendationItem({super.key, required this.newsItem});
 
@@ -21,7 +21,7 @@ class RecommendationItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(16.0),
             child: Image.network(
-              newsItem.imgUrl,
+              newsItem.urlToImage,
               height: 120,
               width: 140,
               fit: BoxFit.cover,
@@ -30,25 +30,26 @@ class RecommendationItem extends StatelessWidget {
           const SizedBox(width: 10),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  newsItem.category,
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  newsItem.source.name,
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: Colors.grey,
                       ),
                 ),
+                const SizedBox(height: 5),
                 Text(
                   newsItem.title,
                   style: Theme.of(context)
                       .textTheme
-                      .headlineSmall!
-                      .copyWith(fontWeight: FontWeight.w500),
+                      .bodyMedium!
+                      .copyWith(fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 5),
                 Text(
-                  '${newsItem.author} • ${newsItem.time}',
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  '${newsItem.author} • ${newsItem.publishedAt}',
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: Colors.grey,
                       ),
                 )

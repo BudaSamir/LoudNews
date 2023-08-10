@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:loudnews/models/news_item.dart';
+import 'package:loudnews/models/news_model.dart';
 import 'package:loudnews/views/components/news_details_screen/news_details_body_section.dart';
 
 import '../components/news_details_screen/news_details_appbar_section.dart';
 
 class NewsDetailsScreen extends StatelessWidget {
-  final NewsItem newsItem;
+  final NewsArticles newsItem;
 
   const NewsDetailsScreen({super.key, required this.newsItem});
 
