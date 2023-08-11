@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
+import 'category_screen.dart';
 import 'home_screen.dart';
 
 class Layout extends StatefulWidget {
@@ -22,7 +23,7 @@ class _LayoutState extends State<Layout> {
   List<Widget> _buildScreens() {
     return [
       HomeScreen(),
-      HomeScreen(),
+      CategoryScreen(),
       HomeScreen(),
     ];
   }
@@ -36,14 +37,14 @@ class _LayoutState extends State<Layout> {
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: "Home",
+        icon: const Icon(Icons.category_outlined),
+        title: "Categories",
         activeColorPrimary: Colors.blue,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: "Home",
+        icon: const Icon(Icons.bookmark),
+        title: "Bookmark",
         activeColorPrimary: Colors.blue,
         inactiveColorPrimary: Colors.grey,
       ),
