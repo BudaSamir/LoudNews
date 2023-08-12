@@ -22,8 +22,8 @@ class _LayoutState extends State<Layout> {
 
   List<Widget> _buildScreens() {
     return [
-      HomeScreen(),
-      CategoryScreen(),
+      const HomeScreen(),
+      const CategoryScreen(),
       HomeScreen(),
     ];
   }

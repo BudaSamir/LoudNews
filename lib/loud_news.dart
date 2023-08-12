@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loudnews/viewmodels/cubits/categories_cubit/categories_cubit.dart';
 import 'package:loudnews/viewmodels/cubits/news_cubit/news_cubit.dart';
 import 'package:loudnews/views/screens/layout.dart';
 
@@ -12,8 +13,15 @@ class LoudNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NewsCubit()..fetchHeadLinesNews(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => NewsCubit()..fetchHeadLinesNews(),
+        ),
+        BlocProvider(
+          create: (context) => CategoriesCubit(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Loud News',
         debugShowCheckedModeBanner: false,

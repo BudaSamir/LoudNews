@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:loudnews/viewmodels/database/local/cache_helper.dart';
 
-const String baseUrl = '';
+import 'end_points.dart';
 
 class DioHelper {
   static late Dio dio;

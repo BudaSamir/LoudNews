@@ -6,21 +6,18 @@ class BannerTitleLeft extends StatelessWidget {
   final void Function()? onTap;
   final String imageUrl;
   final String title;
-  final int articleCount;
 
   const BannerTitleLeft({
     super.key,
     required this.onTap,
     required this.imageUrl,
     required this.title,
-    required this.articleCount,
   });
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 2.5),
         padding: const EdgeInsets.only(left: 25.0),
         height: 142.0,
         width: double.infinity,
@@ -29,26 +26,15 @@ class BannerTitleLeft extends StatelessWidget {
           children: [
             Expanded(
                 flex: 3,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: GoogleFonts.poppins(
-                          fontSize: 25.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      '$articleCount Articles',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                    )
-                  ],
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    title,
+                    style: GoogleFonts.poppins(
+                        fontSize: 25.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                 )),
             Expanded(
               flex: 3,

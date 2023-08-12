@@ -45,7 +45,8 @@ class NewsArticles {
         title: json['title'] ?? 'null',
         description: json['description'] ?? 'null',
         url: json['url'] ?? 'null',
-        urlToImage: json['urlToImage'] ?? 'null',
+        urlToImage: json['urlToImage'] ??
+            "https://techcrunch.com/wp-content/uploads/2022/01/locket-app.jpg?w=1390&crop=1",
         publishedAt: json['publishedAt'] ?? 'null',
         content: json['content'] ?? 'null');
   }

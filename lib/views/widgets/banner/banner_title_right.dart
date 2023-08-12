@@ -6,14 +6,12 @@ class BannerTitleRight extends StatelessWidget {
   final void Function()? onTap;
   final String imageUrl;
   final String title;
-  final int articleCount;
 
   const BannerTitleRight({
     super.key,
     required this.onTap,
     required this.imageUrl,
     required this.title,
-    required this.articleCount,
   });
   @override
   Widget build(BuildContext context) {
@@ -54,25 +52,15 @@ class BannerTitleRight extends StatelessWidget {
             ),
             Expanded(
                 flex: 3,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      title,
-                      style: GoogleFonts.poppins(
-                          fontSize: 22.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600),
-                    ),
-                    Text(
-                      '$articleCount Articles',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                    )
-                  ],
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    title,
+                    style: GoogleFonts.poppins(
+                        fontSize: 22.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ))
           ],
         ),

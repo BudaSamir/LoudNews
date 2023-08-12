@@ -1,7 +1,8 @@
 // Network Connection Details
-const String baseUrl = '';
-const String baseImage = '';
-const String baseSocket = '';
+const String baseUrl = 'https://newsapi.org/v2/';
+const String topHeadlines = 'top-headlines';
+const String everything = 'everything';
+const String apiKey = '6ceae27e857a413ca1f1d6f59374df77';
 
 //auth endpoints
 const String loginEndPoint = 'signin';

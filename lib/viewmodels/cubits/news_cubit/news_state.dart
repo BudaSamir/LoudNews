@@ -18,3 +18,5 @@ class FailedFetchNews extends NewsState {
 
   FailedFetchNews(this.error);
 }
+
+class SetCategoryState extends NewsState {}
